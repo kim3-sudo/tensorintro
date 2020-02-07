@@ -1,3 +1,7 @@
+echo "Before first execution, enable eXecution with command"
+echo "chmod +x tensorflowsetup.sh"
+echo "Run with sudo ./tensorflowsetup.sh"
+
 python3 --version
 pip3 --version
 virtualenv --version
