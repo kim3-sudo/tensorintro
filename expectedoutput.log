@@ -1,0 +1,244 @@
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/resource_variable_ops.py:1630: calling BaseResourceVariable.__init__ (from tensorflow.python.ops.resource_variable_ops) with constraint is deprecated and will be removed in a future version.
+Instructions for updating:
+If using Keras pass *_constraint arguments to layers.
+Train on 1000 samples
+Epoch 1/10
+1000/1000 [==============================] - 0s 240us/sample - loss: 195.8875 - categorical_accuracy: 0.1030
+Epoch 2/10
+1000/1000 [==============================] - 0s 47us/sample - loss: 838.0477 - categorical_accuracy: 0.0890
+Epoch 3/10
+1000/1000 [==============================] - 0s 40us/sample - loss: 1660.2049 - categorical_accuracy: 0.1060
+Epoch 4/10
+1000/1000 [==============================] - 0s 42us/sample - loss: 2908.5153 - categorical_accuracy: 0.0880
+Epoch 5/10
+1000/1000 [==============================] - 0s 47us/sample - loss: 4328.7414 - categorical_accuracy: 0.0930
+Epoch 6/10
+1000/1000 [==============================] - 0s 42us/sample - loss: 5865.8036 - categorical_accuracy: 0.0960
+Epoch 7/10
+1000/1000 [==============================] - 0s 42us/sample - loss: 7717.7263 - categorical_accuracy: 0.0920
+Epoch 8/10
+1000/1000 [==============================] - 0s 44us/sample - loss: 9890.2244 - categorical_accuracy: 0.0900
+Epoch 9/10
+1000/1000 [==============================] - 0s 40us/sample - loss: 11993.7185 - categorical_accuracy: 0.1060
+Epoch 10/10
+1000/1000 [==============================] - 0s 43us/sample - loss: 14920.8569 - categorical_accuracy: 0.1020
+Train on 1000 samples, validate on 100 samples
+Epoch 1/10
+1000/1000 [==============================] - 0s 79us/sample - loss: 18213.7323 - categorical_accuracy: 0.1000 - val_loss: 21224.7923 - val_categorical_accuracy: 0.0500
+Epoch 2/10
+1000/1000 [==============================] - 0s 45us/sample - loss: 21342.8950 - categorical_accuracy: 0.0790 - val_loss: 16224.7714 - val_categorical_accuracy: 0.1200
+Epoch 3/10
+1000/1000 [==============================] - 0s 47us/sample - loss: 23691.8050 - categorical_accuracy: 0.1030 - val_loss: 16020.5915 - val_categorical_accuracy: 0.1500
+Epoch 4/10
+1000/1000 [==============================] - 0s 44us/sample - loss: 26710.4132 - categorical_accuracy: 0.1050 - val_loss: 25668.3273 - val_categorical_accuracy: 0.1100
+Epoch 5/10
+1000/1000 [==============================] - 0s 45us/sample - loss: 30861.4305 - categorical_accuracy: 0.1120 - val_loss: 31966.5259 - val_categorical_accuracy: 0.1600
+Epoch 6/10
+1000/1000 [==============================] - 0s 46us/sample - loss: 36366.4491 - categorical_accuracy: 0.0830 - val_loss: 32550.5681 - val_categorical_accuracy: 0.0500
+Epoch 7/10
+1000/1000 [==============================] - 0s 49us/sample - loss: 39367.6104 - categorical_accuracy: 0.0970 - val_loss: 37689.4825 - val_categorical_accuracy: 0.0300
+Epoch 8/10
+1000/1000 [==============================] - 0s 52us/sample - loss: 42716.5477 - categorical_accuracy: 0.1050 - val_loss: 52118.0111 - val_categorical_accuracy: 0.1100
+Epoch 9/10
+1000/1000 [==============================] - 0s 45us/sample - loss: 49282.6194 - categorical_accuracy: 0.0910 - val_loss: 58186.8500 - val_categorical_accuracy: 0.1100
+Epoch 10/10
+1000/1000 [==============================] - 0s 47us/sample - loss: 54239.8871 - categorical_accuracy: 0.1010 - val_loss: 55490.5639 - val_categorical_accuracy: 0.0900
+WARNING:tensorflow:Expected a shuffled dataset but input dataset `x` is not shuffled. Please invoke `shuffle()` on input dataset.
+Train on 32 steps
+Epoch 1/10
+32/32 [==============================] - 0s 4ms/step - loss: 57091.9177 - categorical_accuracy: 0.1230
+Epoch 2/10
+32/32 [==============================] - 0s 1ms/step - loss: 63643.0984 - categorical_accuracy: 0.0930
+Epoch 3/10
+32/32 [==============================] - 0s 1ms/step - loss: 68400.6230 - categorical_accuracy: 0.0890
+Epoch 4/10
+32/32 [==============================] - 0s 1ms/step - loss: 79031.4739 - categorical_accuracy: 0.0950
+Epoch 5/10
+32/32 [==============================] - 0s 1ms/step - loss: 82402.4077 - categorical_accuracy: 0.1030
+Epoch 6/10
+32/32 [==============================] - 0s 1ms/step - loss: 86117.8296 - categorical_accuracy: 0.1220
+Epoch 7/10
+32/32 [==============================] - 0s 1ms/step - loss: 94161.9081 - categorical_accuracy: 0.1040
+Epoch 8/10
+32/32 [==============================] - 0s 1ms/step - loss: 102919.4202 - categorical_accuracy: 0.0940
+Epoch 9/10
+32/32 [==============================] - 0s 1ms/step - loss: 110103.0215 - categorical_accuracy: 0.0930
+Epoch 10/10
+32/32 [==============================] - 0s 1ms/step - loss: 113423.2488 - categorical_accuracy: 0.1040
+WARNING:tensorflow:Expected a shuffled dataset but input dataset `x` is not shuffled. Please invoke `shuffle()` on input dataset.
+Train on 32 steps, validate on 4 steps
+Epoch 1/10
+32/32 [==============================] - 0s 5ms/step - loss: 123505.6899 - categorical_accuracy: 0.0960 - val_loss: 121475.9688 - val_categorical_accuracy: 0.0800
+Epoch 2/10
+32/32 [==============================] - 0s 1ms/step - loss: 131158.5830 - categorical_accuracy: 0.0960 - val_loss: 132272.9121 - val_categorical_accuracy: 0.0800
+Epoch 3/10
+32/32 [==============================] - 0s 1ms/step - loss: 137231.9932 - categorical_accuracy: 0.1040 - val_loss: 154505.9062 - val_categorical_accuracy: 0.0800
+Epoch 4/10
+32/32 [==============================] - 0s 2ms/step - loss: 151058.4658 - categorical_accuracy: 0.1030 - val_loss: 190572.4219 - val_categorical_accuracy: 0.0800
+Epoch 5/10
+32/32 [==============================] - 0s 2ms/step - loss: 159560.4395 - categorical_accuracy: 0.0730 - val_loss: 158240.7969 - val_categorical_accuracy: 0.1000
+Epoch 6/10
+32/32 [==============================] - 0s 1ms/step - loss: 161445.2876 - categorical_accuracy: 0.1120 - val_loss: 136184.8008 - val_categorical_accuracy: 0.1000
+Epoch 7/10
+32/32 [==============================] - 0s 1ms/step - loss: 173564.5718 - categorical_accuracy: 0.1030 - val_loss: 212071.0586 - val_categorical_accuracy: 0.0900
+Epoch 8/10
+32/32 [==============================] - 0s 1ms/step - loss: 180028.0830 - categorical_accuracy: 0.1060 - val_loss: 263046.2812 - val_categorical_accuracy: 0.0900
+Epoch 9/10
+32/32 [==============================] - 0s 1ms/step - loss: 189936.0474 - categorical_accuracy: 0.0910 - val_loss: 281361.1172 - val_categorical_accuracy: 0.0900
+Epoch 10/10
+32/32 [==============================] - 0s 1ms/step - loss: 203431.5015 - categorical_accuracy: 0.0860 - val_loss: 235589.8516 - val_categorical_accuracy: 0.1100
+1000/1000 [==============================] - 0s 48us/sample - loss: 238600.3203 - categorical_accuracy: 0.0980
+32/32 [==============================] - 0s 2ms/step - loss: 238558.2417 - categorical_accuracy: 0.0980
+(1000, 10)
+Train on 1000 samples
+Epoch 1/5
+1000/1000 [==============================] - 0s 102us/sample - loss: 12.1814 - acc: 0.1070
+Epoch 2/5
+1000/1000 [==============================] - 0s 40us/sample - loss: 15.6859 - acc: 0.0990
+Epoch 3/5
+1000/1000 [==============================] - 0s 40us/sample - loss: 22.9484 - acc: 0.1010
+Epoch 4/5
+1000/1000 [==============================] - 0s 45us/sample - loss: 35.4895 - acc: 0.0940
+Epoch 5/5
+1000/1000 [==============================] - 0s 45us/sample - loss: 52.5634 - acc: 0.1000
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/math_grad.py:1424: where (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+Train on 1000 samples
+Epoch 1/5
+1000/1000 [==============================] - 0s 152us/sample - loss: 11.5596 - acc: 0.0950
+Epoch 2/5
+1000/1000 [==============================] - 0s 42us/sample - loss: 11.5187 - acc: 0.1060
+Epoch 3/5
+1000/1000 [==============================] - 0s 38us/sample - loss: 11.5113 - acc: 0.1080
+Epoch 4/5
+1000/1000 [==============================] - 0s 36us/sample - loss: 11.5067 - acc: 0.1030
+Epoch 5/5
+1000/1000 [==============================] - 0s 38us/sample - loss: 11.5027 - acc: 0.1120
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/keras/initializers.py:119: calling RandomUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+Train on 1000 samples
+Epoch 1/5
+1000/1000 [==============================] - 0s 77us/sample - loss: 11.5282 - acc: 0.1000
+Epoch 2/5
+1000/1000 [==============================] - 0s 37us/sample - loss: 11.5282 - acc: 0.1010
+Epoch 3/5
+1000/1000 [==============================] - 0s 36us/sample - loss: 11.5279 - acc: 0.1000
+Epoch 4/5
+1000/1000 [==============================] - 0s 35us/sample - loss: 11.5285 - acc: 0.1000
+Epoch 5/5
+1000/1000 [==============================] - 0s 33us/sample - loss: 11.5281 - acc: 0.0990
+Train on 1000 samples, validate on 100 samples
+Epoch 1/5
+1000/1000 [==============================] - 0s 107us/sample - loss: 11.5280 - acc: 0.1000 - val_loss: 11.3855 - val_acc: 0.0200
+Epoch 2/5
+1000/1000 [==============================] - 0s 47us/sample - loss: 11.5282 - acc: 0.1020 - val_loss: 11.3856 - val_acc: 0.0200
+Epoch 3/5
+1000/1000 [==============================] - 0s 42us/sample - loss: 11.5285 - acc: 0.1030 - val_loss: 11.3838 - val_acc: 0.0200
+Epoch 4/5
+1000/1000 [==============================] - 0s 42us/sample - loss: 11.5280 - acc: 0.1000 - val_loss: 11.3839 - val_acc: 0.0200
+Epoch 5/5
+1000/1000 [==============================] - 0s 44us/sample - loss: 11.5279 - acc: 0.1000 - val_loss: 11.3858 - val_acc: 0.0200
+{'backend': 'tensorflow',
+ 'class_name': 'Sequential',
+ 'config': {'layers': [{'class_name': 'Dense',
+                        'config': {'activation': 'relu',
+                                   'activity_regularizer': None,
+                                   'batch_input_shape': [None, 32],
+                                   'bias_constraint': None,
+                                   'bias_initializer': {'class_name': 'Zeros',
+                                                        'config': {'dtype': 'float32'}},
+                                   'bias_regularizer': None,
+                                   'dtype': 'float32',
+                                   'kernel_constraint': None,
+                                   'kernel_initializer': {'class_name': 'GlorotUniform',
+                                                          'config': {'dtype': 'float32',
+                                                                     'seed': None}},
+                                   'kernel_regularizer': None,
+                                   'name': 'dense_17',
+                                   'trainable': True,
+                                   'units': 64,
+                                   'use_bias': True}},
+                       {'class_name': 'Dense',
+                        'config': {'activation': 'softmax',
+                                   'activity_regularizer': None,
+                                   'bias_constraint': None,
+                                   'bias_initializer': {'class_name': 'Zeros',
+                                                        'config': {'dtype': 'float32'}},
+                                   'bias_regularizer': None,
+                                   'dtype': 'float32',
+                                   'kernel_constraint': None,
+                                   'kernel_initializer': {'class_name': 'GlorotUniform',
+                                                          'config': {'dtype': 'float32',
+                                                                     'seed': None}},
+                                   'kernel_regularizer': None,
+                                   'name': 'dense_18',
+                                   'trainable': True,
+                                   'units': 10,
+                                   'use_bias': True}}],
+            'name': 'sequential_3'},
+ 'keras_version': '2.2.4-tf'}
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/init_ops.py:97: calling GlorotUniform.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+WARNING:tensorflow:From /usr/local/lib/python3.6/dist-packages/tensorflow_core/python/ops/init_ops.py:97: calling Zeros.__init__ (from tensorflow.python.ops.init_ops) with dtype is deprecated and will be removed in a future version.
+Instructions for updating:
+Call initializer instance with the dtype argument instead of passing it to the constructor
+backend: tensorflow
+class_name: Sequential
+config:
+  layers:
+  - class_name: Dense
+    config:
+      activation: relu
+      activity_regularizer: null
+      batch_input_shape: !!python/tuple [null, 32]
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {dtype: float32}
+      bias_regularizer: null
+      dtype: float32
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config: {dtype: float32, seed: null}
+      kernel_regularizer: null
+      name: dense_17
+      trainable: true
+      units: 64
+      use_bias: true
+  - class_name: Dense
+    config:
+      activation: softmax
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {dtype: float32}
+      bias_regularizer: null
+      dtype: float32
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: GlorotUniform
+        config: {dtype: float32, seed: null}
+      kernel_regularizer: null
+      name: dense_18
+      trainable: true
+      units: 10
+      use_bias: true
+  name: sequential_3
+keras_version: 2.2.4-tf
+
+Train on 1000 samples
+Epoch 1/5
+1000/1000 [==============================] - 0s 115us/sample - loss: 11.5349 - acc: 0.0920
+Epoch 2/5
+1000/1000 [==============================] - 0s 37us/sample - loss: 11.5430 - acc: 0.0960
+Epoch 3/5
+1000/1000 [==============================] - 0s 35us/sample - loss: 11.5555 - acc: 0.0970
+Epoch 4/5
+1000/1000 [==============================] - 0s 37us/sample - loss: 11.5632 - acc: 0.1020
+Epoch 5/5
+1000/1000 [==============================] - 0s 37us/sample - loss: 11.5715 - acc: 0.1030
