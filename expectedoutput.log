@@ -242,3 +242,6 @@ Epoch 4/5
 1000/1000 [==============================] - 0s 37us/sample - loss: 11.5632 - acc: 0.1020
 Epoch 5/5
 1000/1000 [==============================] - 0s 37us/sample - loss: 11.5715 - acc: 0.1030
+
+#### NOTE ####
+#### This file doesn't contain the native Keras expected output. ####
