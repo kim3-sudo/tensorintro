@@ -1,9 +1,16 @@
 # TensorFlow
 
 Some Python3 code that runs on Linux, assuming dependencies. To install those dependencies, run:
+
 `
 sudo apt install python3
+`
+
+`
 sudo pip install keras
+`
+
+`
 sudo pip install tensorflow
 `
 
