@@ -1,8 +1,14 @@
 from __future__ import absolute_import, division, print_function, unicode_literals
 import tensorflow as tf
+import numpy as np
+import json
+import pprint
 from tensorflow import keras
 from tensorflow.keras import layers
+from keras.models import Sequential
+from keras.layers import Dense
 
+# Add some models using the sequential method
 model = tf.keras.Sequential()
 # Adds a densely-connected layer with 64 units to the model:
 model.add(layers.Dense(64, activation='relu'))
@@ -10,9 +16,6 @@ model.add(layers.Dense(64, activation='relu'))
 model.add(layers.Dense(64, activation='relu'))
 # Add a softmax layer with 10 output units:
 model.add(layers.Dense(10, activation='softmax'))
-
-
-
 
 # Create a sigmoid layer:
 layers.Dense(64, activation='sigmoid')
@@ -32,7 +35,6 @@ layers.Dense(64, kernel_initializer='orthogonal')
 layers.Dense(64, bias_initializer=tf.keras.initializers.Constant(2.0))
 
 
-
 model = tf.keras.Sequential([
 # Adds a densely-connected layer with 64 units to the model:
 layers.Dense(64, activation='relu', input_shape=(32,)),
@@ -45,8 +47,6 @@ model.compile(optimizer=tf.keras.optimizers.Adam(0.01),
               loss='categorical_crossentropy',
               metrics=['accuracy'])
 
-
-
 # Configure a model for mean-squared error regression.
 model.compile(optimizer=tf.keras.optimizers.Adam(0.01),
               loss='mse',       # mean squared error
@@ -57,18 +57,11 @@ model.compile(optimizer=tf.keras.optimizers.RMSprop(0.01),
               loss=tf.keras.losses.CategoricalCrossentropy(),
               metrics=[tf.keras.metrics.CategoricalAccuracy()])
 
-
-
-import numpy as np
-
 data = np.random.random((1000, 32))
 labels = np.random.random((1000, 10))
 
 model.fit(data, labels, epochs=10, batch_size=32)
 
-
-
-import numpy as np
 
 data = np.random.random((1000, 32))
 labels = np.random.random((1000, 10))
@@ -99,9 +92,6 @@ val_dataset = val_dataset.batch(32)
 model.fit(dataset, epochs=10,
           validation_data=val_dataset)
 
-
-
-
 # With Numpy arrays
 data = np.random.random((1000, 32))
 labels = np.random.random((1000, 10))
@@ -114,15 +104,9 @@ dataset = dataset.batch(32)
 
 model.evaluate(dataset)
 
-
-
-
-
+# print the results of the model effectiveness
 result = model.predict(data, batch_size=32)
 print(result.shape)
-
-
-
 
 inputs = tf.keras.Input(shape=(32,))  # Returns an input placeholder
 
@@ -130,9 +114,6 @@ inputs = tf.keras.Input(shape=(32,))  # Returns an input placeholder
 x = layers.Dense(64, activation='relu')(inputs)
 x = layers.Dense(64, activation='relu')(x)
 predictions = layers.Dense(10, activation='softmax')(x)
-
-
-
 
 model = tf.keras.Model(inputs=inputs, outputs=predictions)
 
@@ -144,10 +125,6 @@ model.compile(optimizer=tf.keras.optimizers.RMSprop(0.001),
 
 # Trains for 5 epochs
 model.fit(data, labels, batch_size=32, epochs=5)
-
-
-
-
 
 class MyModel(tf.keras.Model):
 
@@ -164,10 +141,7 @@ class MyModel(tf.keras.Model):
     x = self.dense_1(inputs)
     return self.dense_2(x)
 
-
-
-
-
+#generate a new model
 model = MyModel(num_classes=10)
 
 # The compile step specifies the training configuration.
@@ -177,10 +151,6 @@ model.compile(optimizer=tf.keras.optimizers.RMSprop(0.001),
 
 # Trains for 5 epochs.
 model.fit(data, labels, batch_size=32, epochs=5)
-
-
-
-
 
 class MyLayer(layers.Layer):
 
@@ -207,10 +177,6 @@ class MyLayer(layers.Layer):
   def from_config(cls, config):
     return cls(**config)
 
-
-
-
-
 model = tf.keras.Sequential([
     MyLayer(10),
     layers.Activation('softmax')])
@@ -223,10 +189,6 @@ model.compile(optimizer=tf.keras.optimizers.RMSprop(0.001),
 # Trains for 5 epochs.
 model.fit(data, labels, batch_size=32, epochs=5)
 
-
-
-
-
 callbacks = [
   # Interrupt training if `val_loss` stops improving for over 2 epochs
   tf.keras.callbacks.EarlyStopping(patience=2, monitor='val_loss'),
@@ -235,9 +197,6 @@ callbacks = [
 ]
 model.fit(data, labels, batch_size=32, epochs=5, callbacks=callbacks,
           validation_data=(val_data, val_labels))
-
-
-
 
 model = tf.keras.Sequential([
 layers.Dense(64, activation='relu', input_shape=(32,)),
@@ -254,49 +213,26 @@ model.save_weights('./weights/my_model')
 # this requires a model with the same architecture.
 model.load_weights('./weights/my_model')
 
-
-
-
-
 # Save weights to a HDF5 file
 model.save_weights('my_model.h5', save_format='h5')
 
 # Restore the model's state
 model.load_weights('my_model.h5')
 
-
-
-
 # Serialize a model to JSON format
 json_string = model.to_json()
 json_string
 
 
-
-
-
-import json
-import pprint
 pprint.pprint(json.loads(json_string))
-
-
-
-
 
 
 fresh_model = tf.keras.models.model_from_json(json_string)
 yaml_string = model.to_yaml()
 print(yaml_string)
 
-
-
-
-
+#generate a fresh moodel from the YAML string that was just generated
 fresh_model = tf.keras.models.model_from_yaml(yaml_string)
-
-
-
-
 
 # Create a simple model
 model = tf.keras.Sequential([
@@ -314,3 +250,18 @@ model.save('my_model.h5')
 
 # Recreate the exact same model, including weights and optimizer.
 model = tf.keras.models.load_model('my_model.h5')
+
+
+# Native Keras model building
+model = Sequential()
+model.add(Dense(units=64, activation='relu', input_dim=100))
+model.add(Dense(units=10, activation='softmax'))
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='sgd',
+              metrics=['accuracy'])
+#iterate on the trining data in batches
+# x_train and y_train are Numpy arrays --just like in the Scikit-Learn API.
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+#evaluate performance
+loss_and_metrics = model.evaluate(x_test, y_test, batch_size=128)
